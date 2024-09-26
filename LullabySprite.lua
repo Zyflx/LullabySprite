@@ -2,10 +2,6 @@
 
 local LullabySprite = {};
 
--- Array containing all LullabySprites that have been created.
--- Used for LullabySprite:fromTag().
-LullabySprite.sprites = {};
-
 -- Initialization function.
 --- @param tag The sprites identifier.
 --- @param path The path to the LullabySprite graphic.
@@ -182,13 +178,6 @@ end
 --- @return The specified field.
 function LullabySprite:get(field)
 	return getProperty(self.tag .. '.' .. field);
-end
-
--- Gets the specified `LullabySprite` by its tag.
---- @param tag The sprites tag.
---- @return The `LullabySprite`.
-function LullabySprite:fromTag(tag)
-	return LullabySprite.sprites[tag];
 end
 
 function tableContains(t, f)
