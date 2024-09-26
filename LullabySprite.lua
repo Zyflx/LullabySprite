@@ -37,8 +37,6 @@ function LullabySprite:new(tag, path, x, y, animated, spriteType)
 		end
 	};
 
-	LullabySprite.sprites[tag] = self;
-
 	return self;
 end
 
