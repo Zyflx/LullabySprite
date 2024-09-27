@@ -52,6 +52,12 @@ function LullabySprite:insert(pos)
 	setObjectOrder(self.tag, pos);
 end
 
+-- Removes this `LullabySprite` from the game.
+--- @param destroy Whether to destroy the sprite instead of just removing it.
+function LullabySprite:remove(destroy)
+	removeLuaSprite(self.tag, destroy or true);
+end
+
 -- Gets the position index of this `LullabySprite`.
 --- @return The current position index of the sprite.
 function LullabySprite:getIndex()
